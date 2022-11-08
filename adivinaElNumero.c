@@ -32,4 +32,6 @@ void main(void)
         printf("\n¡Adivinaste¡\nLo hiciste en %d intentos.\n", i + 1);
     else
         printf("\nEl número oculto es %d.\nPrueba suerte más tarde, si quieres...\n", secretNumber);
+
+    system("pause");
 }
