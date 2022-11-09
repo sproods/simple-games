@@ -38,7 +38,7 @@ void cubeNumber1(void)
 
     srand(time(NULL));
 
-    cube = rand() % 7;
+    cube = (rand() % 6) + 1;
 
     printf("\nYou got: %d\n", cube);
 }
@@ -49,8 +49,8 @@ void cubeNumber2(void)
 
     srand(time(NULL));
 
-    cube1 = rand() % 7;
-    cube2 = rand() % 7;
+    cube1 = (rand() % 6) + 1;
+    cube2 = (rand() % 6) + 1;
 
     printf("\nYou got: %d and %d\n", cube1, cube2);
 }
