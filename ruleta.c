@@ -6,7 +6,7 @@
 #include <string.h>
 #include <stdbool.h>
 
-#define MAX 7
+#define MAX 6
 #define TAM 50
 
 void words(char [][TAM], int);
@@ -28,7 +28,7 @@ void words(char A[MAX][TAM], int T)
 {
     int i;
 
-    for (i = 0; i < T; i++)
+    for (i = 0; i <= T; i++)
     {
         printf("\nDigite la palabra %d en la ruleta: ", i + 1);
         gets(A[i]);
@@ -48,7 +48,7 @@ void lucky(char A[MAX][50], int T)
     while(true)
     {
         srand(time(NULL));
-        N = rand() % 8;
+        N = rand() % 7;
         
         strcpy(var, A[N]);
 
