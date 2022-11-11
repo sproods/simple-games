@@ -5,6 +5,7 @@
 #include <time.h>
 #include <string.h>
 #include <stdbool.h>
+#include <ctype.h>
 
 #define MAX 6
 #define TAM 50
@@ -36,10 +37,10 @@ void words(char A[MAX][TAM], int T)
     }
 }
 
-void lucky(char A[MAX][50], int T)
+void lucky(char A[MAX][TAM], int T)
 {
     int i, N, res;
-    char var[50];
+    char var[TAM], VAR[TAM];
 
     printf("\nPUlse 1 para iniciar el sorteo: ");
     scanf("%d", &res);
@@ -52,7 +53,15 @@ void lucky(char A[MAX][50], int T)
         
         strcpy(var, A[N]);
 
-        printf("\nLa palabra elegida es %s\n", var);
+        i = 0;
+        while(var[i] != '\0')
+        {
+            VAR[i] = toupper(var[i]);
+            i++;
+        }
+        VAR[i] = '\0';
+
+        printf("\nLa palabra elegida es %s\n", VAR);
 
         printf("\n¿Desea seguir probando suerte? (1.Sí   0.No): ");
         scanf("%d", &res);
